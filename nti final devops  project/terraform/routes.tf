@@ -26,11 +26,11 @@ resource "aws_route_table" "public_route_table" {
 }
 
 # Associate public subnet with the route table
-resource "aws_route_table_association" "aws_subnet.public_subnet_a" {
+resource "aws_route_table_association" "public_subnet_a1" {
   subnet_id      = aws_subnet.public_subnet_a.id
   route_table_id = aws_route_table.public_route_table.id
 }
-resource "aws_route_table_association" "aws_subnet.public_subnet_b" {
+resource "aws_route_table_association" "public_subnet_b1" {
   subnet_id      = aws_subnet.public_subnet_b.id
   route_table_id = aws_route_table.public_route_table.id
 }
@@ -61,12 +61,12 @@ resource "aws_route_table" "private_route_table" {
 }
 
 # Associate private subnet with the route table
-resource "aws_route_table_association" "aws_subnet.private_subnet_a" {
+resource "aws_route_table_association" "private_subnet_a2" {
   subnet_id      = aws_subnet.private_subnet_a.id
   route_table_id = aws_route_table.private_route_table.id
 }
 
-resource "aws_route_table_association" "aws_subnet.private_subnet_b" {
+resource "aws_route_table_association" "private_subnet_b2" {
   subnet_id      = aws_subnet.private_subnet_b.id
   route_table_id = aws_route_table.private_route_table.id
 }
